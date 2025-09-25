@@ -5,7 +5,7 @@ export interface CardProps {
   image: string;
   title: string;
   price: number;
-  location: string;
+  rating: number;
 }
 
 // Placeholder for Button component props
@@ -40,4 +40,10 @@ export interface PropertyProps {
   };
   image: string;
   discount: string;
+}
+
+export interface PillProps {
+  label: string;
+  active?: boolean;
+  onClick?: () => void;
 }
