@@ -47,3 +47,10 @@ export interface PillProps {
   active?: boolean;
   onClick?: () => void;
 }
+
+export interface categoriesProps {
+  src: string;
+  alt: string;
+  label: string;
+  height?: number;
+}

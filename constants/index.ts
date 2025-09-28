@@ -1,4 +1,5 @@
 import { PropertyProps } from '@/interfaces';
+import { categoriesProps } from '@/interfaces';
 
 export const HeroBg = '/images/Image 1.png';
 
@@ -18,7 +19,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-6',
     },
-    image: 'https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg',
+    image: '/images/List 1.png',
     discount: '',
   },
   {
@@ -36,7 +37,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '5-7',
     },
-    image: 'https://example.com/image2.jpg',
+    image: '/images/image 3.png',
     discount: '30',
   },
   {
@@ -54,7 +55,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2-3',
     },
-    image: 'https://example.com/image3.jpg',
+    image: '/images/image 4.png',
     discount: '',
   },
   {
@@ -72,7 +73,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '2-4',
     },
-    image: 'https://example.com/image4.jpg',
+    image: '/images/List 4.png',
     discount: '15',
   },
   {
@@ -90,7 +91,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '4-6',
     },
-    image: 'https://example.com/image5.jpg',
+    image: '/images/image 6.png',
     discount: '20',
   },
   {
@@ -108,7 +109,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '4',
       occupants: '8-10',
     },
-    image: 'https://example.com/image6.jpg',
+    image: '/images/image 7.png',
     discount: '',
   },
   {
@@ -126,7 +127,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-5',
     },
-    image: 'https://example.com/image7.jpg',
+    image: '/images/image 8.png',
     discount: '10',
   },
   {
@@ -144,7 +145,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '5-6',
     },
-    image: 'https://example.com/image8.jpg',
+    image: '/images/image 9.png',
     discount: '25',
   },
   {
@@ -162,7 +163,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2-3',
     },
-    image: 'https://example.com/image9.jpg',
+    image: '/images/List 9.png',
     discount: '',
   },
   {
@@ -180,7 +181,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '5-7',
     },
-    image: 'https://example.com/image10.jpg',
+    image: '/images/List 10.png',
     discount: '40',
   },
   {
@@ -198,7 +199,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '4',
       occupants: '6-8',
     },
-    image: 'https://example.com/image11.jpg',
+    image: '/images/image 12.png',
     discount: '50',
   },
   {
@@ -216,7 +217,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '3',
       occupants: '4-6',
     },
-    image: 'https://example.com/image12.jpg',
+    image: '/images/List 12.png',
     discount: '',
   },
   {
@@ -234,7 +235,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '2',
       occupants: '2-4',
     },
-    image: 'https://example.com/image13.jpg',
+    image: '/images/List 13.png',
     discount: '35',
   },
   {
@@ -252,7 +253,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2',
     },
-    image: 'https://example.com/image14.jpg',
+    image: '/images/List 14.png',
     discount: '',
   },
   {
@@ -270,7 +271,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '4',
       occupants: '6-8',
     },
-    image: 'https://example.com/image15.jpg',
+    image: '/images/image 17.png',
     discount: '20',
   },
   {
@@ -288,79 +289,32 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: '1',
       occupants: '2-4',
     },
-    image: 'https://example.com/image16.jpg',
+    image: '/images/image 18.png',
     discount: '25',
   },
+];
+
+export const categories: categoriesProps[] = [
+  { src: '/images/living-room 1.png', alt: 'Rooms', label: 'Rooms' },
+  { src: '/images/mansion 1.png', alt: 'Mansion', label: 'Mansion' },
+  { src: '/images/farm 1.png', alt: 'Countryside', label: 'Countryside' },
+  { src: '/images/villa 1.png', alt: 'Villa', label: 'Villa' },
+  { src: '/images/palm-tree 1.png', alt: 'Tropical', label: 'Tropical' },
+  { src: '/images/key-chain 1.png', alt: 'New', label: 'New' },
   {
-    name: 'Riverfront Mansion',
-    address: {
-      state: 'Paris',
-      city: 'Île-de-France',
-      country: 'France',
-    },
-    rating: 4.86,
-    category: ['Riverfront', 'Private Garden', 'Self Checkin'],
-    price: 5000,
-    offers: {
-      bed: '4',
-      shower: '3',
-      occupants: '6-8',
-    },
-    image: 'https://example.com/image17.jpg',
-    discount: '30',
+    src: '/images/swimming-pool 1.png',
+    alt: 'Amazing pool',
+    label: 'Amazing pool',
   },
-  {
-    name: 'Ski Chalet',
-    address: {
-      state: 'Zermatt',
-      city: 'Valais',
-      country: 'Switzerland',
-    },
-    rating: 4.75,
-    category: ['Mountain View', 'Ski Access', 'Fireplace'],
-    price: 3900,
-    offers: {
-      bed: '3',
-      shower: '3',
-      occupants: '4-5',
-    },
-    image: 'https://example.com/image18.jpg',
-    discount: '',
-  },
-  {
-    name: 'Island Paradise Villa',
-    address: {
-      state: 'Mahe',
-      city: 'Victoria',
-      country: 'Seychelles',
-    },
-    rating: 4.98,
-    category: ['Beachfront', 'Private Pool', 'Chef Service'],
-    price: 6500,
-    offers: {
-      bed: '5',
-      shower: '5',
-      occupants: '8-10',
-    },
-    image: 'https://example.com/image19.jpg',
-    discount: '60',
-  },
-  {
-    name: 'Clifftop Retreat',
-    address: {
-      state: 'Cape Town',
-      city: 'Western Cape',
-      country: 'South Africa',
-    },
-    rating: 4.78,
-    category: ['Ocean View', 'Private Pool', 'Self Checkin'],
-    price: 4100,
-    offers: {
-      bed: '3',
-      shower: '3',
-      occupants: '4-5',
-    },
-    image: 'https://example.com/image20.jpg',
-    discount: '',
-  },
+  { src: '/images/vacations 1.png', alt: 'Beach house', label: 'Beach house' },
+  { src: '/images/island (1) 1.png', alt: 'Island', label: 'Island' },
+  { src: '/images/tent 1.png', alt: 'Camping', label: 'Camping' },
+  { src: '/images/apartment 1.png', alt: 'Apartment', label: 'Apartment' },
+  { src: '/images/home 1.png', alt: 'House', label: 'House' },
+  { src: '/images/cottage 1.png', alt: 'Lakefront', label: 'Lakefront' },
+  { src: '/images/barn 1.png', alt: 'Farm house', label: 'Farm house' },
+  { src: '/images/treehouse (1) 1.png', alt: 'Treehouse', label: 'Treehouse' },
+  { src: '/images/cabin 1.png', alt: 'Cabins', label: 'Cabins' },
+  { src: '/images/castle-tower 1.png', alt: 'Castles', label: 'Castles' },
+  { src: '/images/farm 1.png', alt: 'Countryside', label: 'Countryside' },
 ];
