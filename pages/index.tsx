@@ -39,7 +39,7 @@ export default function Home() {
           <div
             className='
     flex flex-col sm:flex-row items-center justify-center
-    border border-[#E9E9E9] rounded-2xl bg-white
+    border border-[#E9E9E9] rounded-full bg-white
     w-full sm:w-auto px-4 py-3 sm:py-2 gap-3 sm:gap-5'
           >
             {/* Location */}
@@ -163,14 +163,12 @@ export default function Home() {
         </div>
 
         {/* Different Property Images */}
-        <div
+        <section
           className='
     flex items-center w-[95%] h-[100px] gap-4 md:gap-1 px-2 py-2
     overflow-x-auto md:overflow-visible scroll-smooth snap-x md:snap-none
     [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
-    justify-start md:justify-between
-  '
-        >
+    justify-start md:justify-between'>
           {categories.map((item, index) => (
             <div
               key={index}
@@ -188,7 +186,7 @@ export default function Home() {
               </h6>
             </div>
           ))}
-        </div>
+        </section>
       </section>
 
       {/* Hero section */}

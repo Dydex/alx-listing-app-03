@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
       <div className='flex flex-col md:flex-row justify-between items-center text-center md:text-left w-[95%] mx-auto border-t border-[#444] py-5 gap-4 text-xs'>
         <p className='leading-relaxed max-w-xs md:max-w-full text-center md:text-left'>
           Some hotels require you to cancel more than 24 hours before check-in.
-          Details{' '}
+          Details
           <Link href='#' className='text-green-600 underline'>
             here
           </Link>
