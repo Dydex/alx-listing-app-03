@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <div className='flex flex-col md:w-1/2 gap-6'>
           <div className='flex-shrink-0'>
             <Image
-              src='/images/Vector-2.png'
+              src='/icons/Vector-2.png'
               alt='Alx-logo'
               width={58.73}
               height={30.6}

@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     <header>
       <div className=' flex items-center justify-center bg-[#34967c] w-full gap-4 h-[27px] '>
         <Image
-          src='/images/Case Minimalistic.png'
+          src='/icons/Case Minimalistic.png'
           alt='Case-image'
           width={15}
           height={15}

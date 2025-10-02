@@ -28,7 +28,7 @@ export default function Home() {
           {/* Logo */}
           <div className='flex-shrink-0'>
             <Image
-              src='/images/Vector.png'
+              src='/icons/Vector.png'
               alt='Alx-logo'
               width={58.73}
               height={30.6}
@@ -124,7 +124,7 @@ export default function Home() {
               <Button
                 icon={
                   <Image
-                    src='/images/Frame 22.png'
+                    src='/icons/Frame 22.png'
                     alt='Search-icon'
                     width={42}
                     height={42}
@@ -168,7 +168,8 @@ export default function Home() {
     flex items-center w-[95%] h-[100px] gap-4 md:gap-1 px-2 py-2
     overflow-x-auto md:overflow-visible scroll-smooth snap-x md:snap-none
     [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
-    justify-start md:justify-between'>
+    justify-start md:justify-between'
+        >
           {categories.map((item, index) => (
             <div
               key={index}
