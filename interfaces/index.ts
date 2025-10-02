@@ -1,4 +1,4 @@
-// interfaces/index.ts
+import ReviewSection from "@/components/property/ReviewSection";
 
 // Placeholder for Card component props
 export interface CardProps {
@@ -24,6 +24,7 @@ export interface InputProps {
 }
 
 export interface PropertyProps {
+  id: string;
   name: string;
   address: {
     state: string;
@@ -40,6 +41,17 @@ export interface PropertyProps {
   };
   image: string;
   discount: string;
+  description: string;
+  review: {
+    avatar: string;
+    comment: string;
+    name: string;
+    rating: number;
+  }[];
+}
+
+export interface ReviewSectionProps {
+  review: PropertyProps['review']
 }
 
 export interface PillProps {
