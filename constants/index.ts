@@ -1,5 +1,6 @@
 import { PropertyProps } from '@/interfaces';
 import { categoriesProps } from '@/interfaces';
+import { ReviewProps } from '@/interfaces';
 
 export const HeroBg = '/images/Image 1.png';
 
@@ -28,16 +29,22 @@ Tucked away on the sun-drenched beaches of Seminyak, Villa Ocean Breeze is your 
 The space  
 BEDROOM & BATHROOM  
 • Bedroom 1 - Primary: King size bed, Ensuite bathroom with rain shower, Dual vanity, Walk-in closet, Smart TV, Balcony with panoramic ocean view  
+
 • Bedroom 2: Queen size bed, Shared bathroom with rain shower, Garden view  
+
 • Bedroom 3: Twin beds, Shared bathroom, Direct pool access  
 `,
-    review: [
-      {
-        avatar: '/images/users/kerry.png',
-        name: 'Kerry',
-        rating: 4.89,
-        comment: `Villa Ocean Breeze exceeded our expectations. The staff were attentive yet gave us privacy, the pool was breathtaking, and we couldn’t get enough of the ocean view from the balcony. Every night felt magical as we sat outside listening to the waves with a drink in hand. It was a stay we’ll cherish forever.`,
-      },
+    amenities: [
+      'pool',
+      'wifi',
+      'sunrise',
+      'bed',
+      'chef',
+      'bathtub',
+      'pan',
+      'broom',
+      'bell',
+      'credit card',
     ],
   },
   {
@@ -68,13 +75,17 @@ BEDROOM & BATHROOM
 • Bedroom 3: Bunk beds, Shared bathroom, Great for children  
 • Bedroom 4: Queen size bed, Shared bathroom, Forest view  
 `,
-    review: [
-      {
-        avatar: '/images/users/alex.png',
-        name: 'Alex',
-        rating: 4.7,
-        comment: `The Mountain Escape Chalet was the perfect getaway. We spent our mornings skiing and our evenings wrapped in blankets by the fire. The balcony view of the mountains was worth every penny. The house had everything we needed, and it felt like a home away from home.`,
-      },
+    amenities: [
+      'mountain',
+      'hot tub',
+      'bed',
+      'pool',
+      'wifi',
+      'people',
+      'chef',
+      'broom',
+      'shaker',
+      'bathtub',
     ],
   },
   {
@@ -104,13 +115,17 @@ BEDROOM & BATHROOM
 • Bedroom 2: Queen size bed, Shared bathroom with walk-in shower  
 • Bedroom 3: Twin beds, Shared bathroom, Garden view  
 `,
-    review: [
-      {
-        avatar: '/images/users/mark.png',
-        name: 'Mark',
-        rating: 4.92,
-        comment: `Desert Mirage Retreat was unforgettable. The views were breathtaking, and the pool was the perfect spot to cool off after a hike. The house was clean, spacious, and beautifully designed. Watching the stars from the terrace at night was an experience we’ll never forget.`,
-      },
+    amenities: [
+      'sunrise',
+      'wifi',
+      'pool',
+      'credit card',
+      'broom',
+      'chef',
+      'bathtub',
+      'people',
+      'shaker',
+      'pan',
     ],
   },
   {
@@ -137,13 +152,17 @@ The Space
 BEDROOM & BATHROOM  
 • Bedroom 1 - Primary: King size bed, Ensuite bathroom with walk-in rain shower, Dual vanity, Walk-in closet, Floor-to-ceiling windows, Balcony with panoramic city views  
 • Bedroom 2: Queen size bed, Shared bathroom with modern fixtures, Closet, City view `,
-    review: [
-      {
-        avatar: '/images/users/emily.png',
-        name: 'Emily',
-        rating: 4.85,
-        comment: `Staying at the City Lights Penthouse was magical. The views of Manhattan were even better than the photos, and every detail inside felt luxurious. The balcony became our favorite spot at night, overlooking the sparkling skyline. Highly recommended for anyone wanting to experience New York in style.`,
-      },
+    amenities: [
+      'wifi',
+      'bed',
+      'bathtub',
+      'credit card',
+      'pool',
+      'chef',
+      'broom',
+      'people',
+      'mountain',
+      'sunrise',
     ],
   },
   {
@@ -172,13 +191,17 @@ BEDROOM & BATHROOM
 • Bedroom 1 - Primary: Queen size bed, Ensuite bathroom with shower, River view  
 • Bedroom 2: Twin beds, Shared bathroom, Forest view  
 `,
-    review: [
-      {
-        avatar: '/images/users/sophia.png',
-        name: 'Sophia',
-        rating: 4.77,
-        comment: `Riverside Cabin was exactly what we needed to disconnect. The peace and quiet were unmatched, and the evenings by the fire pit were magical. The river was beautiful, and we even spotted deer nearby. Truly a slice of paradise.`,
-      },
+    amenities: [
+      'bathtub',
+      'wifi',
+      'pool',
+      'chef',
+      'broom',
+      'pan',
+      'people',
+      'credit card',
+      'bell',
+      'hot tub',
     ],
   },
   {
@@ -210,13 +233,17 @@ BEDROOM & BATHROOM
 • Bedroom 3: Queen size bed, Ensuite bathroom, Balcony access  
 • Bedroom 4: King size bed, Shared bathroom, Pool view  
 • Bedroom 5: Twin beds, Shared bathroom, Suitable for kids `,
-    review: [
-      {
-        avatar: '/images/users/sophia.png',
-        name: 'Sophia',
-        rating: 4.95,
-        comment: `The Modern Beachfront Villa was a dream come true. Every morning we woke up to breathtaking ocean views, and the private pool was the highlight of our stay. Having a private chef made everything effortless — every meal was delicious and beautifully presented. The villa itself was spotless, spacious, and perfect for our group. Truly a once-in-a-lifetime experience!`,
-      },
+    amenities: [
+      'pool',
+      'wifi',
+      'sunrise',
+      'bathtub',
+      'chef',
+      'bed',
+      'broom',
+      'shaker',
+      'people',
+      'credit card',
     ],
   },
   {
@@ -247,13 +274,17 @@ BEDROOM & BATHROOM
 • Bedroom 3: Twin beds, Shared bathroom  
 • Bedroom 4: Queen size bed, Ensuite bathroom with shower  
 `,
-    review: [
-      {
-        avatar: '/images/users/liam.png',
-        name: 'Liam',
-        rating: 4.65,
-        comment: `This lodge was pure perfection. The view of the lake was stunning, and the home was beautifully decorated. We loved taking kayaks out during the day and cozying up by the fireplace at night.`,
-      },
+    amenities: [
+      'hot tub',
+      'wifi',
+      'bed',
+      'broom',
+      'pool',
+      'chef',
+      'bathtub',
+      'pan',
+      'people',
+      'credit card',
     ],
   },
   {
@@ -281,13 +312,17 @@ The space
 BEDROOM & BATHROOM  
 • Bedroom 1: Queen size bed, Ensuite bathroom with shower, Beach access  
 `,
-    review: [
-      {
-        avatar: '/images/users/sofia.png',
-        name: 'Sofia',
-        rating: 4.8,
-        comment: `The bungalow was right by the beach, which was amazing. It was simple but had everything we needed. We loved waking up and going for a swim just steps away from our door.`,
-      },
+    amenities: [
+      'wifi',
+      'pool',
+      'sunrise',
+      'bathtub',
+      'chef',
+      'bed',
+      'broom',
+      'bell',
+      'people',
+      'credit card',
     ],
   },
   {
@@ -316,12 +351,18 @@ BEDROOM & BATHROOM
 • Bedroom 1: Queen size bed, Ensuite bathroom with walk-in shower, City view  
 • Living space: Sofa bed for additional guest  
 `,
-    review: [{
-      avatar: '/images/users/daniel.png',
-      name: 'Daniel',
-      rating: 4.6,
-      comment: `The Urban Loft Apartment was everything we hoped for. The view at night with the city lights was breathtaking. It’s the perfect base to explore Manhattan. Compact but stylish, it felt very New York!`,
-    }],
+    amenities: [
+      'wifi',
+      'bed',
+      'pool',
+      'credit card',
+      'bathtub',
+      'chef',
+      'people',
+      'broom',
+      'shaker',
+      'sunrise',
+    ],
   },
   {
     id: 'secluded-forest-cabin',
@@ -351,12 +392,18 @@ BEDROOM & BATHROOM
 • Bedroom 2: Queen bed, Shared bathroom  
 • Bedroom 3: Double bed, Shared bathroom  
 • Bedroom 4: Twin beds, Ideal for kids  `,
-    review: [{
-      avatar: '/images/users/james.png',
-      name: 'James',
-      rating: 4.72,
-      comment: `The Secluded Forest Cabin was everything we hoped for. The location felt incredibly private and peaceful, yet we were still close enough to the town and ski slopes. The hot tub was our favorite feature after long days of hiking. The cabin was spacious, cozy, and well-equipped. We would definitely come back for another getaway!`,
-    }],
+    amenities: [
+      'bathtub',
+      'wifi',
+      'hot tub',
+      'bed',
+      'broom',
+      'chef',
+      'pool',
+      'credit card',
+      'people',
+      'sunrise',
+    ],
   },
   {
     id: 'cliffside-villa',
@@ -386,12 +433,18 @@ BEDROOM & BATHROOM
 • Bedroom 2: Queen bed, Ensuite bathroom, Balcony with sea views  
 • Bedroom 3: Queen bed, Ensuite bathroom, Garden view  
 • Bedroom 4: Twin beds, Ensuite bathroom  `,
-    review: [{
-      avatar: '/images/users/isabella.png',
-      name: 'Isabella',
-      rating: 4.93,
-      comment: `Cliffside Villa was pure perfection! The infinity pool overlooking the sea was the highlight of our stay. The villa was beautifully furnished, with every detail thought of. We loved sipping wine on the terrace while watching the sunset over the Amalfi Coast. A truly unforgettable experience — we can’t wait to return.`,
-    }],
+    amenities: [
+      'wifi',
+      'pool',
+      'chef',
+      'bathtub',
+      'bed',
+      'broom',
+      'credit card',
+      'people',
+      'hot tub',
+      'sunrise',
+    ],
   },
   {
     id: 'coastal-escape-villa',
@@ -419,12 +472,18 @@ BEDROOM & BATHROOM
 • Bedroom 1 - Primary: King size bed, Ensuite bathroom with rain shower, Terrace with ocean view  
 • Bedroom 2: Queen size bed, Ensuite bathroom with walk-in shower, Garden view  
 `,
-    review: [{
-      avatar: '/images/users/emma.png',
-      name: 'Emma',
-      rating: 4.83,
-      comment: `Staying at the Coastal Harbor House was like living in a dream. The views were out of this world, and the infinity pool was our favorite spot. Every evening we watched the famous Santorini sunset, and it was just magical. Couldn’t have asked for a better stay.`,
-    }],
+    amenities: [
+      'pool',
+      'wifi',
+      'bathtub',
+      'bed',
+      'chef',
+      'broom',
+      'credit card',
+      'mountain',
+      'people',
+      'pan',
+    ],
   },
   {
     id: 'historical-villa',
@@ -452,12 +511,18 @@ The Space
 BEDROOM & BATHROOM  
 • Bedroom 1: King bed, Ensuite bathroom, Garden view  
 • Bedroom 2: Queen bed, Shared bathroom, Historical décor `,
-    review: [{
-      avatar: '/images/users/elena.png',
-      name: 'Elena',
-      rating: 4.67,
-      comment: `The Historical Villa was enchanting. We felt like we were living in a piece of history while still enjoying modern comfort. Breakfast in the courtyard each morning was unforgettable. Highly recommended for anyone wanting an authentic Tuscan experience.`,
-    }],
+    amenities: [
+      'bathtub',
+      'bed',
+      'chef',
+      'wifi',
+      'pool',
+      'broom',
+      'credit card',
+      'people',
+      'sunrise',
+      'shaker',
+    ],
   },
   {
     id: 'downtown-apartment',
@@ -484,12 +549,18 @@ Inside, sleek Japanese minimalism meets modern convenience with a bright open-pl
 The Space  
 BEDROOM & BATHROOM  
 • Bedroom: Queen bed, Ensuite bathroom, City views`,
-    review: [{
-      avatar: '/images/users/hiroshi.png',
-      name: 'Hiroshi',
-      rating: 4.8,
-      comment: `The Downtown Apartment was a great choice for our Tokyo trip. It was clean, modern, and close to everything we needed — restaurants, trains, and nightlife. The view of the city skyline from the balcony was a bonus.`,
-    }],
+    amenities: [
+      'wifi',
+      'pool',
+      'bed',
+      'bathtub',
+      'chef',
+      'broom',
+      'credit card',
+      'people',
+      'hot tub',
+      'sunrise',
+    ],
   },
   {
     id: 'luxury-safari-lodge',
@@ -519,12 +590,18 @@ BEDROOM & BATHROOM
 • Bedroom 2: Queen bed, Ensuite bathroom, Wildlife views  
 • Bedroom 3: Queen bed, Ensuite bathroom, Canopy bed  
 • Bedroom 4: Twin beds, Ensuite bathroom  `,
-    review: [{
-      avatar: '/images/users/amina.png',
-      name: 'Amina',
-      rating: 4.97,
-      comment: `Staying at the Luxury Safari Lodge was the highlight of our trip. The guided tours were incredible, and we saw the Big Five up close. The lodge itself felt like a five-star resort, and the staff made every moment unforgettable.`,
-    }],
+    amenities: [
+      'pool',
+      'wifi',
+      'bathtub',
+      'chef',
+      'broom',
+      'bed',
+      'credit card',
+      'people',
+      'mountain',
+      'sunrise',
+    ],
   },
   {
     id: 'countryside-cottage',
@@ -552,12 +629,18 @@ The Space
 BEDROOM & BATHROOM  
 • Bedroom 1: King bed, Shared bathroom  
 • Bedroom 2: Twin beds, Shared bathroom`,
-    review: [{
-      avatar: '/images/users/oliver.png',
-      name: 'Oliver',
-      rating: 4.58,
-      comment: `The Countryside Cottage was charming and peaceful. We loved the fireplace in the evenings and the easy access to nearby villages. It was the perfect spot to disconnect and relax.`,
-    }],
+    amenities: [
+      'wifi',
+      'bathtub',
+      'bed',
+      'broom',
+      'chef',
+      'credit card',
+      'pool',
+      'people',
+      'sunrise',
+      'pan',
+    ],
   },
 ];
 
@@ -584,4 +667,115 @@ export const categories: categoriesProps[] = [
   { src: '/logos/cabin 1.png', alt: 'Cabins', label: 'Cabins' },
   { src: '/logos/castle-tower 1.png', alt: 'Castles', label: 'Castles' },
   { src: '/logos/farm 1.png', alt: 'Countryside', label: 'Countryside' },
+];
+
+export const review: ReviewProps[] = [
+  {
+    avatar: '/avatars/avatar 1.png',
+    name: 'Kerry',
+    rating: 4.89,
+    comment: `Villa Ocean Breeze exceeded our expectations. The staff were attentive yet gave us privacy, the pool was breathtaking, and we couldn’t get enough of the ocean view from the balcony.`,
+  },
+  {
+    avatar: '/avatars/avatar 2.png',
+    name: 'Oliver',
+    rating: 4.58,
+    comment: `The Countryside Cottage was charming and peaceful. We loved the fireplace in the evenings and the easy access to nearby villages. It was the perfect spot to disconnect and relax.`,
+  },
+  {
+    avatar: '/avatars/avatar 3.png',
+    name: 'Amina',
+    rating: 4.97,
+    comment: `Staying at the Luxury Safari Lodge was the highlight of our trip. The guided tours were incredible, and we saw the Big Five up close. The lodge itself felt like a five-star resort, and the staff made every moment unforgettable.`,
+  },
+
+  {
+    avatar: '/avatars/avatar 4.png',
+    name: 'Hiroshi',
+    rating: 4.8,
+    comment: `The Downtown Apartment was a great choice for our Tokyo trip. It was clean, modern, and close to everything we needed — restaurants, trains, and nightlife. The view of the city skyline from the balcony was a bonus.`,
+  },
+
+  // {
+  //   avatar: '/images/users/elena.png',
+  //   name: 'Elena',
+  //   rating: 4.67,
+  //   comment: `The Historical Villa was enchanting. We felt like we were living in a piece of history while still enjoying modern comfort. Breakfast in the courtyard each morning was unforgettable. Highly recommended for anyone wanting an authentic Tuscan experience.`,
+  // },
+
+  // {
+  //   avatar: '/images/users/emma.png',
+  //   name: 'Emma',
+  //   rating: 4.83,
+  //   comment: `Staying at the Coastal Harbor House was like living in a dream. The views were out of this world, and the infinity pool was our favorite spot. Every evening we watched the famous Santorini sunset, and it was just magical. Couldn’t have asked for a better stay.`,
+  // },
+
+  // {
+  //   avatar: '/images/users/isabella.png',
+  //   name: 'Isabella',
+  //   rating: 4.93,
+  //   comment: `Cliffside Villa was pure perfection! The infinity pool overlooking the sea was the highlight of our stay. The villa was beautifully furnished, with every detail thought of. We loved sipping wine on the terrace while watching the sunset over the Amalfi Coast. A truly unforgettable experience — we can’t wait to return.`,
+  // },
+
+  // {
+  //   avatar: '/images/users/james.png',
+  //   name: 'James',
+  //   rating: 4.72,
+  //   comment: `The Secluded Forest Cabin was everything we hoped for. The location felt incredibly private and peaceful, yet we were still close enough to the town and ski slopes. The hot tub was our favorite feature after long days of hiking. The cabin was spacious, cozy, and well-equipped. We would definitely come back for another getaway!`,
+  // },
+
+  // {
+  //   avatar: '/images/users/daniel.png',
+  //   name: 'Daniel',
+  //   rating: 4.6,
+  //   comment: `The Urban Loft Apartment was everything we hoped for. The view at night with the city lights was breathtaking. It’s the perfect base to explore Manhattan. Compact but stylish, it felt very New York!`,
+  // },
+
+  // {
+  //   avatar: '/images/users/sofia.png',
+  //   name: 'Sofia',
+  //   rating: 4.8,
+  //   comment: `The bungalow was right by the beach, which was amazing. It was simple but had everything we needed. We loved waking up and going for a swim just steps away from our door.`,
+  // },
+
+  // {
+  //   avatar: '/images/users/liam.png',
+  //   name: 'Liam',
+  //   rating: 4.65,
+  //   comment: `This lodge was pure perfection. The view of the lake was stunning, and the home was beautifully decorated. We loved taking kayaks out during the day and cozying up by the fireplace at night.`,
+  // },
+
+  // {
+  //   avatar: '/images/users/sophia.png',
+  //   name: 'Sophia',
+  //   rating: 4.95,
+  //   comment: `The Modern Beachfront Villa was a dream come true. Every morning we woke up to breathtaking ocean views, and the private pool was the highlight of our stay. Having a private chef made everything effortless — every meal was delicious and beautifully presented. The villa itself was spotless, spacious, and perfect for our group. Truly a once-in-a-lifetime experience!`,
+  // },
+
+  // {
+  //   avatar: '/images/users/alex.png',
+  //   name: 'Alex',
+  //   rating: 4.7,
+  //   comment: `The Mountain Escape Chalet was the perfect getaway. We spent our mornings skiing and our evenings wrapped in blankets by the fire. The balcony view of the mountains was worth every penny. The house had everything we needed, and it felt like a home away from home.`,
+  // },
+
+  // {
+  //   avatar: '/images/users/sophia.png',
+  //   name: 'Sophia',
+  //   rating: 4.77,
+  //   comment: `Riverside Cabin was exactly what we needed to disconnect. The peace and quiet were unmatched, and the evenings by the fire pit were magical. The river was beautiful, and we even spotted deer nearby. Truly a slice of paradise.`,
+  // },
+  // {
+  //   avatar: '/images/users/emily.png',
+  //   name: 'Emily',
+  //   rating: 4.85,
+  //   comment: `Staying at the City Lights Penthouse was magical. The views of Manhattan were even better than the photos, and every detail inside felt luxurious. The balcony became our favorite spot at night, overlooking the sparkling skyline. Highly recommended for anyone wanting to experience New York in style.`,
+  // },
+
+  // {
+  //   avatar: '/images/users/mark.png',
+  //   name: 'Mark',
+  //   rating: 4.92,
+  //   comment: `Desert Mirage Retreat was unforgettable. The views were breathtaking, and the pool was the perfect spot to cool off after a hike. The house was clean, spacious, and beautifully designed. Watching the stars from the terrace at night was an experience we’ll never forget.`,
+  // },
 ];

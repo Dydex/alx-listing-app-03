@@ -1,25 +1,29 @@
 const BookingSection: React.FC<{ price: number }> = ({ price }) => {
   return (
-    <div className='bg-white p-6 shadow-md rounded-lg'>
-      <h3 className='text-xl font-semibold'>${price}/night</h3>
+    <div className='bg-white sticky top-10 p-6 shadow-md h-[350px] rounded-lg w-[35%] mt-8'>
+      <h3 className='text-xl text-[#8E8E8E] font-semibold'>
+        {' '}
+        <span className='text-black'>${price}</span> /night
+      </h3>
       <div className='mt-4'>
-        <label>Check-in</label>
+        <label className='text-black'>Check in</label>
         <input type='date' className='border p-2 w-full mt-2' />
       </div>
       <div className='mt-4'>
-        <label>Check-out</label>
+        <label className='text-black'>Check out</label>
         <input type='date' className='border p-2 w-full mt-2' />
       </div>
 
       {/* Total payment */}
-      <div className='mt-4'>
-        <p>
-          Total payment: <strong>${price * 7}</strong>
+      <div className='mt-4 flex justify-between '>
+        <p className='text-[#8E8E8E]'>Total payment:</p>
+        <p className='text-[#34967C]'>
+          <strong>${price * 7}</strong>
         </p>
       </div>
 
       {/* Reserve button */}
-      <button className='mt-4 bg-green-500 text-white py-2 px-4 rounded-md'>
+      <button className='mt-4 w-[100%] bg-[#34967C] text-white py-2 px-4 rounded-md'>
         Reserve now
       </button>
     </div>
