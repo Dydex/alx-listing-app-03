@@ -6,6 +6,10 @@ export interface CardProps {
   title: string;
   price: number;
   rating: number;
+  address: {
+    state: string;
+    city: string;
+    country: string;}
 }
 
 // Placeholder for Button component props

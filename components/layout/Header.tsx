@@ -13,7 +13,7 @@ const Header: React.FC = () => {
           width={15}
           height={15}
         />
-        <p className='text-xs'>
+        <p className='text-xs text-white'>
           Overseas trip? Get the latest information on travel guides
         </p>
         <Button
@@ -144,24 +144,21 @@ const Header: React.FC = () => {
 
           {/* Sign in/up */}
           <div className='flex gap-2 text-xs mt-4 md:mt-0'>
-            <div className='bg-black px-6 py-3 rounded-full text-white'>
-              <Button
-                className=''
-                label='Sign in'
-                onClick={() => {
-                  /* handle sign in click */
-                }}
-              />
-            </div>
+            <Button
+              label='Sign in'
+              className='border border-[#E9E9E9] bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-[#34967C] hover:text-white transition-colors duration-300'
+              onClick={() => {
+                /* handle sign in click */
+              }}
+            />
 
-            <div className='bg-black px-6 py-3 rounded-full text-white'>
-              <Button
-                label='Sign up'
-                onClick={() => {
-                  /* handle sign up click */
-                }}
-              />
-            </div>
+            <Button
+              label='Sign up'
+              className='border border-[#E9E9E9] bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-[#34967C] hover:text-white transition-colors duration-300'
+              onClick={() => {
+                /* handle sign up click */
+              }}
+            />
           </div>
         </div>
       </section>

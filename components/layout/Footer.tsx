@@ -30,9 +30,9 @@ const Footer: React.FC = () => {
 
         {/* Links */}
         <div className='grid grid-cols-2 sm:flex sm:flex-row gap-10 md:w-1/2 justify-around mx-auto text-center'>
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col items-start gap-4'>
             <h6 className='text-lg font-semibold'>Explore</h6>
-            <div className='flex flex-col gap-2 text-xs'>
+            <div className='flex flex-col items-start gap-2 text-xs'>
               <p>Apartments in Dubai</p>
               <p>Hotels in New York</p>
               <p>Villa in Spain</p>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
 
           <div className='flex flex-col gap-4'>
             <h6 className='text-lg font-semibold'>Company</h6>
-            <div className='flex flex-col gap-2 text-xs'>
+            <div className='flex flex-col items-start gap-2 text-xs'>
               <p>About us</p>
               <p>Blog</p>
               <p>Career</p>
@@ -51,9 +51,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className='flex flex-col gap-4'>
-            <h6 className='text-lg font-semibold'>Help</h6>
-            <div className='flex flex-col gap-2 text-xs'>
+          <div className='flex flex-col items-start gap-4'>
+            <h6 className='text-lg  font-semibold'>Help</h6>
+            <div className='flex flex-col items-start gap-2 text-xs'>
               <p>Support</p>
               <p>Cancel booking</p>
               <p>Refunds Process</p>

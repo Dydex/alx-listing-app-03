@@ -27,7 +27,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
     bathtub: <Bath className='w-6 h-6 text-gray-500' />,
     bed: <Bed className='w-6 h-6 text-gray-500' />,
     bell: <Bell className='w-6 h-6 text-gray-500' />,
-    broom: <Sparkles className='w-6 h-6 text-gray-500' />,
+    housekeeping: <Sparkles className='w-6 h-6 text-gray-500' />,
     chef: <ChefHat className='w-6 h-6 text-gray-500' />,
     'credit card': <CreditCard className='w-6 h-6 text-gray-500' />,
     'hot tub': <Flame className='w-6 h-6 text-gray-500' />, // closest icon
@@ -35,7 +35,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
     pan: <UtensilsCrossed className='w-6 h-6 text-gray-500' />,
     people: <Users className='w-6 h-6 text-gray-500' />,
     pool: <Waves className='w-6 h-6 text-gray-500' />,
-    shaker: <Martini className='w-6 h-6 text-gray-500' />,
+    bartender: <Martini className='w-6 h-6 text-gray-500' />,
     sunrise: <Sun className='w-6 h-6 text-gray-500' />,
     wifi: <Wifi className='w-6 h-6 text-gray-500' />,
   };

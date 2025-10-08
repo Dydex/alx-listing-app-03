@@ -1,12 +1,36 @@
 import Image from 'next/image';
-import { HeroBg } from '@/constants';
 import Button from '@/components/common/Button';
 import Pill from '@/components/common/Pill';
-import Card from '@/components/common/Card';
 import { PROPERTYLISTINGSAMPLE } from '@/constants';
 import React, { useState } from 'react';
 import { categories } from '@/constants';
-import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+
+const Card = dynamic(
+  () =>
+    new Promise<typeof import('@/components/common/Card')>((resolve) => {
+      setTimeout(() => resolve(import('@/components/common/Card')), 2000); 
+    }),
+  {
+    loading: () => (
+      <div className='bg-white rounded-xl overflow-hidden shadow-sm p-4 animate-pulse'>
+        <div className='bg-gray-200 h-48 w-full rounded-xl mb-4' />
+        <div className='h-4 bg-gray-200 rounded w-3/4 mb-2' />
+        <div className='h-4 bg-gray-200 rounded w-1/2 mb-4' />
+        <div className='h-5 bg-gray-200 rounded w-1/4' />
+      </div>
+    ),
+  }
+);
+
+
+const HeroSection = dynamic(() => import('@/components/sections/HeroSection'), {
+  loading: () => (
+    <div className='relative w-[95%] mx-auto h-[481px] bg-gray-200 rounded-3xl overflow-hidden animate-pulse' />
+  ),
+});
 
 const filters = [
   'All',
@@ -40,7 +64,7 @@ export default function Home() {
               alt={item.alt}
               width={40}
               height={item.height || 40}
-              className='rounded-full'
+              className=''
             />
             <h6 className='text-[#616161] text-xs mt-2 font-medium'>
               {item.label}
@@ -49,28 +73,8 @@ export default function Home() {
         ))}
       </section>
 
-      {/* Hero section */}
-      <section className='relative bg-white mx-auto w-[95%]'>
-        {/* Background Image */}
-        <Image
-          src={HeroBg}
-          alt='Hero-bg image'
-          width={1608}
-          height={481}
-          priority
-          className='w-full max-w-[1600px] mx-auto h-auto rounded-3xl'
-        />
-
-        {/* Overlay Text */}
-        <div className='absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4'>
-          <h1 className='text-2xl sm:text-3xl md:text-5xl font-bold leading-tight'>
-            Find your favorite <br /> place here!
-          </h1>
-          <p className='text-base sm:text-lg md:text-2xl mt-4'>
-            The best prices for over 2 million properties worldwide
-          </p>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <HeroSection />
 
       {/* Filter section */}
       <section className='bg-white py-4 sm:py-6'>
@@ -118,13 +122,16 @@ export default function Home() {
       <section className='w-[95%] mx-auto py-4 bg-white text-sm'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pb-8'>
           {PROPERTYLISTINGSAMPLE.map((property) => (
-            <Card
-              key={property.name}
-              title={property.name}
-              price={property.price}
-              rating={property.rating}
-              image={property.image}
-            />
+            <Link key={property.id} href={`/property/${property.id}`}>
+              <Card
+                key={property.name}
+                title={property.name}
+                price={property.price}
+                rating={property.rating}
+                image={property.image}
+                address={property.address}
+              />
+            </Link>
           ))}
         </div>
         <div className=' flex flex-col items-center justify-center bg-[#ffffff]  gap-4 h-[150px] '>
