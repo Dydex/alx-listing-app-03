@@ -14,7 +14,7 @@ export default function PropertyPage() {
   if (!property) return <p>Property not found</p>;
 
   return (
-    <>
+    <main>
       <div className=''>
         <PropertyImage property={property} />
       </div>
@@ -25,6 +25,6 @@ export default function PropertyPage() {
       <div className=' w-[95%] mx-auto '>
         <ReviewSection reviews={review} />
       </div>
-    </>
+    </main>
   );
 }

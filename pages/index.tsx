@@ -21,11 +21,11 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   return (
-    <main className='bg-white'>
+    <main className=''>
       {/* Different Property Images */}
       <section
         className='
-    flex items-center w-[95%] h-[100px] gap-4 md:gap-1 px-2 py-2
+    flex items-center w-[95%] mx-auto h-[100px] gap-4 md:gap-1 px-2 py-2
     overflow-x-auto md:overflow-visible scroll-smooth snap-x md:snap-none
     [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
     justify-start md:justify-between'

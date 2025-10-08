@@ -5,7 +5,7 @@ import { categories } from '@/constants';
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <header className='border-b border-[#E6E6E6]'>
       <div className=' flex items-center justify-center bg-[#34967c] w-full gap-4 h-[27px] '>
         <Image
           src='/icons/Case Minimalistic.png'

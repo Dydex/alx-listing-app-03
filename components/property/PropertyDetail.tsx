@@ -41,7 +41,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   };
 
   return (
-    <div className='container pr-6 w-[62%] border-t border-white mt-8 '>
+    <div className='container pr-6 w-[62%] border-t border-[#E6E6E6] mt-8 '>
       {/* Description */}
       <div className=''>
         <div className='mt-4'>
@@ -53,12 +53,18 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
           </p>
         </div>
 
-        <p onClick={() => setIsExpanded(!isExpaneded)}>
-          {isExpaneded ? 'Show less' : 'Read more'}
-        </p>
+        <div
+          onClick={() => setIsExpanded(!isExpaneded)}
+          className='flex space-x-2'
+        >
+          <p className='text-[#34967C]'>
+            {isExpaneded ? 'Show less' : 'Read more'}
+          </p>
+          <img src='/icons/Arrow.png' alt='Arrow' width={16} height={6} />
+        </div>
 
         {/* Amenities */}
-        <div className='border-t border-white mt-10 mb-8'>
+        <div className='border-t border-[#E6E6E6] mt-10 mb-8'>
           <h2 className='text-2xl font-semibold pt-10'>
             What this place offers
           </h2>
