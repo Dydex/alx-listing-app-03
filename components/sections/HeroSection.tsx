@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
           width={1608}
           height={481}
           loading='lazy'
-          onLoadingComplete={() => setLoaded(true)}
+          onLoad={() => setLoaded(true)}
           className={`w-full h-full object-cover rounded-3xl transition-opacity duration-700 ${
             loaded ? 'opacity-100' : 'opacity-0'
           }`}

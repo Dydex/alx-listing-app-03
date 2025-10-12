@@ -1,9 +1,36 @@
 import { PropertyProps } from '@/interfaces';
+import { useRef, useState, useEffect } from 'react';
 
 const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
+  const images = [
+    property.image,
+    property.image,
+    property.image,
+    property.image,
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Check which image is in view
+  const handleScroll = () => {
+    const scroll = scrollRef.current;
+    if (scroll) {
+      const index = Math.round(scroll.scrollLeft / scroll.offsetWidth);
+      setCurrentIndex(index + 1);
+    }
+  };
+
+  useEffect(() => {
+    const scroll = scrollRef.current;
+    if (scroll) scroll.addEventListener('scroll', handleScroll);
+    return () => scroll?.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className='w-[95%] mx-auto mt-16'>
-      <h1 className='text-4xl font-bold'>{property.name}</h1>
+      
+      <h1 className='text-3xl sm:text-4xl font-bold'>{property.name}</h1>
       <div className='flex space-x-2'>
         <div className='flex items-center space-x-2  mt-2'>
           <img src='/icons/Star 2.png' alt='Star' width={16} height={2} />
@@ -22,8 +49,8 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
         </div>
       </div>
 
-      {/* Image Grid */}
-      <div className='flex gap-2 mt-4 w-full'>
+      {/* Image Grid for Tabs/Desktop */}
+      <div className='hidden sm:flex gap-2 mt-4 w-full'>
         <img
           src={property.image}
           alt={property.name}
@@ -51,6 +78,27 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
         </div>
 
         {/* Add more images */}
+      </div>
+
+      {/* Image Grid for Mobile */}
+      <div className='relative sm:hidden'>
+        <div
+          ref={scrollRef}
+          className=' flex overflow-x-auto space-x-4 snap-x snap-mandatory scroll-smooth w-full'
+        >
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={property.name}
+              className='w-full h-80 flex-shrink-0 object-cover snap-center'
+            />
+          ))}
+        </div>
+
+        <div className='absolute bottom-2 right-3 bg-black/60 text-white text-sm px-2 py-1 rounded-full'>
+          {currentIndex}/{images.length}
+        </div>
       </div>
 
       <ul className='flex flex-wrap space-x-4 mt-4'>
