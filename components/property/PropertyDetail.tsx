@@ -21,7 +21,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   property,
 }) => {
   const [isExpaneded, setIsExpanded] = useState(false);
-  const MAX_LENGTH = 850;
+  const MAX_LENGTH = 609;
 
   const iconMap: Record<string, React.ReactNode> = {
     bathtub: <Bath className='w-6 h-6 text-gray-500' />,
@@ -41,7 +41,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   };
 
   return (
-    <div className='container pr-6 w-[62%] border-t border-[#E6E6E6] mt-8 '>
+    <div className='container pr-6 w-full sm:w-[62%] border-t border-[#E6E6E6] mt-8 '>
       {/* Description */}
       <div className=''>
         <div className='mt-4'>
@@ -60,7 +60,9 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
           <p className='text-[#34967C]'>
             {isExpaneded ? 'Show less' : 'Read more'}
           </p>
-          <img src='/icons/Arrow.png' alt='Arrow' width={16} height={6} />
+          {!isExpaneded && (
+            <img src='/icons/Arrow.png' alt='Arrow' width={16} height={6} />
+          )}
         </div>
 
         {/* Amenities */}
