@@ -23,6 +23,14 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   const [isExpaneded, setIsExpanded] = useState(false);
   const MAX_LENGTH = 609;
 
+  const [showAll, setShowAll] = useState(false);
+  const isSmallScreen =
+    typeof window !== 'undefined' && window.innerWidth < 640;
+  const visibleAmenities =
+    isSmallScreen && !showAll
+      ? property.amenities.slice(0, 5)
+      : property.amenities;
+
   const iconMap: Record<string, React.ReactNode> = {
     bathtub: <Bath className='w-6 h-6 text-gray-500' />,
     bed: <Bed className='w-6 h-6 text-gray-500' />,
@@ -41,7 +49,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   };
 
   return (
-    <div className='container pr-6 w-full sm:w-[62%] border-t border-[#E6E6E6] mt-8 '>
+    <div className='container pr-0 sm:pr-6 w-full sm:w-[62%] border-t border-[#E6E6E6] mt-8 '>
       {/* Description */}
       <div className=''>
         <div className='mt-4'>
@@ -74,14 +82,22 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
             Each home is fully equipped to meet your needs, with ample space and
             privacy.
           </p>
-          <ul className='grid grid-cols-2 gap-y-6 gap-x-6 mt-6 text-lg'>
-            {property.amenities.map((list, index) => (
+          <ul className='grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-6 mt-6 text-2xl sm:text-lg'>
+            {visibleAmenities.map((list, index) => (
               <li key={index} className='flex items-center gap-2'>
                 {iconMap[list] || <Wifi className='w-4 h-4 text-gray-400' />}
                 <span className='capitalize'>{list}</span>
               </li>
             ))}
           </ul>
+
+          <div className='border border-black flex justify-center mt-8 h-12 rounded-md '>
+            {property.amenities.length > 5 && (
+              <button onClick={() => setShowAll(!showAll)} className=''>
+                {showAll ? 'Show less amenities' : 'Show all amenities'}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>
