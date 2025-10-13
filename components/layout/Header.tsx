@@ -40,20 +40,56 @@ const Header: React.FC = () => {
           </div>
 
           {/* Search Bar */}
-          <div className='flex md:hidden'>
-            <div>
-              <label htmlFor=''>Where to</label>
-              <input type='text' placeholder='Location' className='' />
+          <div className='flex items-center  md:hidden border border-[#E9E9E9] rounded-full'>
+            <div className='flex flex-col items-center '>
+              <label htmlFor='Location' className='text-xs'>
+                Where to
+              </label>
+              <input
+                id='Location'
+                type='text'
+                placeholder='Location'
+                className=' w-[70px] text-xs ml-4 '
+              />
             </div>
 
             <div>
-              <label htmlFor=''>l</label>
-              <input type='text' placeholder='Date' />
+              <input
+                id='Day'
+                type='text'
+                placeholder='Date'
+                className='w-[70px] text-xs mt-4.5'
+              />
             </div>
-            <div>
-              <input type='text' placeholder='Add guest' />
+            <div className='flex '>
+              <input
+                id='People'
+                type='text'
+                placeholder='Add guest'
+                className='w-[70px] text-xs mt-4'
+              />
+            </div>
+
+            <div className='flex items-center pr-1'>
+              {' '}
+              <Button
+                icon={
+                  <Image
+                    src='/icons/Frame 22.png'
+                    alt='Search-icon'
+                    width={38}
+                    height={38}
+                  />
+                }
+                className='w-[42px] h-[42px]'
+                label='Search'
+                onClick={() => {
+                  /* handle search click */
+                }}
+              />{' '}
             </div>
           </div>
+
           <div
             className=' hidden md:flex flex-row items-center justify-center
                   border border-[#E9E9E9] rounded-full bg-white
