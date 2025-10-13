@@ -6,7 +6,7 @@ import { categories } from '@/constants';
 const Header: React.FC = () => {
   return (
     <header className='border-b border-[#E6E6E6]'>
-      <div className=' flex items-center justify-center bg-[#34967c] w-full gap-4 h-[27px] '>
+      <div className=' flex items-center justify-center bg-[#34967c] w-full gap-4 min-h-[27px]'>
         <Image
           src='/icons/Case Minimalistic.png'
           alt='Case-image'
@@ -14,7 +14,8 @@ const Header: React.FC = () => {
           height={15}
         />
         <p className='text-xs text-white'>
-          Overseas trip? Get the latest information on travel guides
+          Overseas trip? Get the latest information <br className='sm:hidden' />{' '}
+          on travel guides
         </p>
         <Button
           className='bg-black px-2 py-0.5 rounded-full text-white text-xs'
@@ -27,9 +28,9 @@ const Header: React.FC = () => {
 
       <section className='flex flex-col justify-center items-center bg-[#ffffff] '>
         {/* Naviagtion & Search Bar */}
-        <div className='flex flex-col md:flex-row py-2 items-center justify-between w-[95%] mx-auto gap-4'>
+        <div className='flex flex-row py-2 items-center md:gap-0 lg:gap-40 w-[95%] mx-auto '>
           {/* Logo */}
-          <div className='flex-shrink-0'>
+          <div className='hidden sm:flex flex-shrink-0'>
             <Image
               src='/icons/Vector.png'
               alt='Alx-logo'
@@ -39,11 +40,24 @@ const Header: React.FC = () => {
           </div>
 
           {/* Search Bar */}
+          <div className='flex md:hidden'>
+            <div>
+              <label htmlFor=''>Where to</label>
+              <input type='text' placeholder='Location' className='' />
+            </div>
+
+            <div>
+              <label htmlFor=''>l</label>
+              <input type='text' placeholder='Date' />
+            </div>
+            <div>
+              <input type='text' placeholder='Add guest' />
+            </div>
+          </div>
           <div
-            className='
-    flex flex-col sm:flex-row items-center justify-center
-    border border-[#E9E9E9] rounded-full bg-white
-    w-full sm:w-auto px-4 py-3 sm:py-2 gap-3 sm:gap-5'
+            className=' hidden md:flex flex-row items-center justify-center
+                  border border-[#E9E9E9] rounded-full bg-white
+                  w-full sm:w-auto px-4 py-3 sm:py-2 gap-3 sm:gap-5'
           >
             {/* Location */}
             <div className='flex flex-col gap-1 w-full sm:w-auto'>
@@ -58,9 +72,9 @@ const Header: React.FC = () => {
                 type='text'
                 placeholder='Search for destination'
                 className='
-        text-black w-full sm:w-[170px] text-sm sm:text-xs outline-none 
-        border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
-      '
+                    text-black w-full sm:w-[170px] text-sm sm:text-xs outline-none 
+                     border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
+                             '
               />
             </div>
 
@@ -77,9 +91,9 @@ const Header: React.FC = () => {
                 type='text'
                 placeholder='Add date'
                 className='
-        text-black w-full sm:w-[100px] text-sm sm:text-xs outline-none 
-        border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
-      '
+            text-black w-full sm:w-[100px] text-sm sm:text-xs outline-none 
+            border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
+              '
               />
             </div>
 
@@ -96,9 +110,9 @@ const Header: React.FC = () => {
                 type='text'
                 placeholder='Add date'
                 className='
-        text-black w-full sm:w-[100px] text-sm sm:text-xs outline-none 
-        border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
-      '
+            text-black w-full sm:w-[100px] text-sm sm:text-xs outline-none 
+            border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
+            '
               />
             </div>
 
@@ -115,9 +129,9 @@ const Header: React.FC = () => {
                 type='text'
                 placeholder='Add guest'
                 className='
-        text-black w-full sm:w-[100px] text-sm sm:text-xs outline-none 
-        border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
-      '
+            text-black w-full sm:w-[100px] text-sm sm:text-xs outline-none 
+            border border-gray-200 sm:border-0 rounded-lg sm:rounded-none px-2 py-2 sm:px-0 sm:py-0
+              '
               />
             </div>
 
@@ -143,7 +157,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Sign in/up */}
-          <div className='flex gap-2 text-xs mt-4 md:mt-0'>
+          <div className='hidden lg:flex gap-2 text-xs mt-4 md:mt-0'>
             <Button
               label='Sign in'
               className='border border-[#E9E9E9] bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-[#34967C] hover:text-white transition-colors duration-300'

@@ -6,12 +6,12 @@ import React, { useState } from 'react';
 import { categories } from '@/constants';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-
+import Head from 'next/head';
 
 const Card = dynamic(
   () =>
     new Promise<typeof import('@/components/common/Card')>((resolve) => {
-      setTimeout(() => resolve(import('@/components/common/Card')), 2000); 
+      setTimeout(() => resolve(import('@/components/common/Card')), 2000);
     }),
   {
     loading: () => (
@@ -24,7 +24,6 @@ const Card = dynamic(
     ),
   }
 );
-
 
 const HeroSection = dynamic(() => import('@/components/sections/HeroSection'), {
   loading: () => (
@@ -45,107 +44,112 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState<string | null>(null);
 
   return (
-    <main className=''>
-      {/* Different Property Images */}
-      <section
-        className='
-    flex items-center w-[95%] mx-auto h-[100px] gap-4 md:gap-1 px-2 py-2
-    overflow-x-auto md:overflow-visible scroll-smooth snap-x md:snap-none
-    [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
-    justify-start md:justify-between'
-      >
-        {categories.map((item, index) => (
-          <div
-            key={index}
-            className='flex flex-col items-center justify-center flex-shrink-0 snap-start'
-          >
-            <Image
-              src={item.src}
-              alt={item.alt}
-              width={40}
-              height={item.height || 40}
-              className=''
-            />
-            <h6 className='text-[#616161] text-xs mt-2 font-medium'>
-              {item.label}
-            </h6>
-          </div>
-        ))}
-      </section>
-
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Filter section */}
-      <section className='bg-white py-4 sm:py-6'>
-        <div className='flex flex-col sm:flex-row justify-between items-center w-[95%] mx-auto gap-4 text-xs sm:text-sm'>
-          {/* Filter Pills */}
-          <div className='w-full sm:w-auto'>
-            <div className='max-w-5xl mx-auto flex flex-wrap gap-2 sm:gap-3 justify-center sm:justify-start'>
-              {filters.map((filter) => (
-                <Pill
-                  key={filter}
-                  label={filter}
-                  active={activeFilter === filter}
-                  onClick={() => setActiveFilter(filter)}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Filter & Sort Buttons */}
-          <div className='flex gap-2 sm:gap-3 flex-wrap justify-center sm:justify-end'>
-            <div className='px-4 sm:px-6 py-2 rounded-full text-black border border-[#E9E9E9]'>
-              <Button
-                className='bg-white'
-                label='Filter'
-                onClick={() => {
-                  /* handle filter click */
-                }}
+    <>
+      <head>
+        <title>Property Listings</title>
+      </head>
+      <main className=''>
+        {/* Different Property Images */}
+        <section
+          className='
+            flex items-center w-[95%] mx-auto h-[100px] gap-4 lg:gap-1 px-2 py-2
+            overflow-x-auto lg:overflow-visible scroll-smooth snap-x lg:snap-none
+            [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]
+            justify-start lg:justify-between'
+        >
+          {categories.map((item, index) => (
+            <div
+              key={index}
+              className='flex flex-col items-center justify-center flex-shrink-0 snap-start'
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={40}
+                height={item.height || 40}
+                className=''
               />
+              <h6 className='text-[#616161] text-xs mt-2 font-medium'>
+                {item.label}
+              </h6>
             </div>
-
-            <div className='px-4 sm:px-6 py-2 rounded-full text-black border border-[#E9E9E9]'>
-              <Button
-                className='bg-white'
-                label='Sort by: Highest Price'
-                onClick={() => {
-                  /* handle search click */
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Card Section */}
-      <section className='w-[95%] mx-auto py-4 bg-white text-sm'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pb-8'>
-          {PROPERTYLISTINGSAMPLE.map((property) => (
-            <Link key={property.id} href={`/property/${property.id}`}>
-              <Card
-                key={property.name}
-                title={property.name}
-                price={property.price}
-                rating={property.rating}
-                image={property.image}
-                address={property.address}
-              />
-            </Link>
           ))}
-        </div>
-        <div className=' flex flex-col items-center justify-center bg-[#ffffff]  gap-4 h-[150px] '>
-          <div className='bg-black px-6 py-2 rounded-full text-white'>
-            <Button
-              label='Show more'
-              onClick={() => {
-                /* show more */
-              }}
-            />
+        </section>
+
+        {/* Hero Section */}
+        <HeroSection />
+
+        {/* Filter section */}
+        <section className='bg-white py-4 sm:py-6'>
+          <div className='flex flex-col sm:flex-row justify-between items-center w-[95%] mx-auto gap-4 text-xs sm:text-sm'>
+            {/* Filter Pills */}
+            <div className='w-full sm:w-auto'>
+              <div className='max-w-5xl mx-auto flex flex-wrap gap-2 sm:gap-3 justify-center sm:justify-start'>
+                {filters.map((filter) => (
+                  <Pill
+                    key={filter}
+                    label={filter}
+                    active={activeFilter === filter}
+                    onClick={() => setActiveFilter(filter)}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Filter & Sort Buttons */}
+            <div className='flex gap-2 sm:gap-3 flex-wrap justify-center sm:justify-end'>
+              <div className='px-4 sm:px-6 py-2 rounded-full text-black border border-[#E9E9E9]'>
+                <Button
+                  className='bg-white'
+                  label='Filter'
+                  onClick={() => {
+                    /* handle filter click */
+                  }}
+                />
+              </div>
+
+              <div className='px-4 sm:px-6 py-2 rounded-full text-black border border-[#E9E9E9]'>
+                <Button
+                  className='bg-white'
+                  label='Sort by: Highest Price'
+                  onClick={() => {
+                    /* handle search click */
+                  }}
+                />
+              </div>
+            </div>
           </div>
-          <h1 className=' text-black'>Click to see more listings</h1>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        {/* Card Section */}
+        <section className='w-[95%] mx-auto py-4 bg-white text-sm'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pb-8'>
+            {PROPERTYLISTINGSAMPLE.map((property) => (
+              <Link key={property.id} href={`/property/${property.id}`}>
+                <Card
+                  key={property.name}
+                  title={property.name}
+                  price={property.price}
+                  rating={property.rating}
+                  image={property.image}
+                  address={property.address}
+                />
+              </Link>
+            ))}
+          </div>
+          <div className=' flex flex-col items-center justify-center bg-[#ffffff]  gap-4 h-[150px] '>
+            <div className='bg-black px-6 py-2 rounded-full text-white'>
+              <Button
+                label='Show more'
+                onClick={() => {
+                  /* show more */
+                }}
+              />
+            </div>
+            <h1 className=' text-black'>Click to see more listings</h1>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

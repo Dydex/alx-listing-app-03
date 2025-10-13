@@ -28,10 +28,10 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
   }, []);
 
   return (
-    <div className='w-[95%] mx-auto mt-16'>
+    <div className='w-full sm:w-[95%] mx-auto mt-16'>
       <div className='flex flex-col-reverse sm:flex-col'>
         {/* Property Name & Location  */}
-        <div className='mt-4 sm:mt-0'>
+        <div className='pl-4 sm:pl-0 mt-4 sm:mt-0'>
           <h1 className='text-2xl sm:text-4xl font-bold'>{property.name}</h1>
           <div className='flex space-x-2'>
             <div className='flex items-center space-x-2  mt-2'>
@@ -79,8 +79,6 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
               />
             </div>
           </div>
-
-          {/* Add more images */}
         </div>
 
         {/* Image Grid for Mobile */}
@@ -105,7 +103,7 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
         </div>
       </div>
 
-      <ul className='flex flex-wrap space-x-4 mt-4'>
+      <ul className='pl-4 sm:pl-0 flex flex-wrap space-x-4 mt-4'>
         {property.category.map((amenity, index) => (
           <li
             key={index}
