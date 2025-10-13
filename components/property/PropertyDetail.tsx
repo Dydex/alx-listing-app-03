@@ -63,7 +63,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
 
         <div
           onClick={() => setIsExpanded(!isExpaneded)}
-          className='flex space-x-2'
+          className='flex items-center space-x-2'
         >
           <p className='text-[#34967C]'>
             {isExpaneded ? 'Show less' : 'Read more'}

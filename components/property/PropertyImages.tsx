@@ -1,7 +1,10 @@
 import { PropertyProps } from '@/interfaces';
 import { useRef, useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
+  const router = useRouter();
+
   const images = [
     property.image,
     property.image,
@@ -83,7 +86,10 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
 
         {/* Image Grid for Mobile */}
         <div className='relative sm:hidden '>
-          <div className='flex'>
+          <div
+            className='flex h-15 items-center gap-2 w-[95%] mx-auto'
+            onClick={() => router.back()}
+          >
             <img
               src='/icons/Arrow Left.png'
               alt='Arrow'
