@@ -28,7 +28,7 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
   }, []);
 
   return (
-    <div className='w-full sm:w-[95%] mx-auto mt-16'>
+    <div className='w-full sm:w-[95%] mx-auto mt-0 md:mt-16'>
       <div className='flex flex-col-reverse sm:flex-col'>
         {/* Property Name & Location  */}
         <div className='pl-4 sm:pl-0 mt-4 sm:mt-0'>
@@ -83,6 +83,15 @@ const PropertyImage: React.FC<{ property: PropertyProps }> = ({ property }) => {
 
         {/* Image Grid for Mobile */}
         <div className='relative sm:hidden '>
+          <div className='flex'>
+            <img
+              src='/icons/Arrow Left.png'
+              alt='Arrow'
+              width={16}
+              height={6}
+            />
+            <h6>Return</h6>
+          </div>
           <div
             ref={scrollRef}
             className=' flex overflow-x-auto space-x-4 snap-x snap-mandatory scroll-smooth w-full'

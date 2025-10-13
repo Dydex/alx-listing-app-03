@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* Card Section */}
         <section className='w-[95%] mx-auto py-4 bg-white text-sm'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 pb-8'>
+          <div className='grid grid-cols-1  md:grid-cols-2 gap-4 sm:gap-6 pb-8'>
             {PROPERTYLISTINGSAMPLE.map((property) => (
               <Link key={property.id} href={`/property/${property.id}`}>
                 <Card

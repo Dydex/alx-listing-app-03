@@ -6,31 +6,33 @@ import { categories } from '@/constants';
 const Header: React.FC = () => {
   return (
     <header className='border-b border-[#E6E6E6]'>
-      <div className=' flex items-center justify-center bg-[#34967c] w-full gap-4 min-h-[27px]'>
-        <Image
-          src='/icons/Case Minimalistic.png'
-          alt='Case-image'
-          width={15}
-          height={15}
-        />
-        <p className='text-xs text-white'>
-          Overseas trip? Get the latest information <br className='sm:hidden' />{' '}
-          on travel guides
-        </p>
-        <Button
-          className='bg-black px-2 py-0.5 rounded-full text-white text-xs'
-          label='More Info'
-          onClick={() => {
-            /* handle search click */
-          }}
-        />
+      <div className=' bg-[#34967c]'>
+        <div className=' flex items-center justify-between md:justify-center bg-[#34967c] w-[95%] md:w-full mx-auto gap-4 min-h-[27px]'>
+          <Image
+            src='/icons/Case Minimalistic.png'
+            alt='Case-image'
+            width={15}
+            height={15}
+          />
+          <p className='text-xs text-white'>
+            Overseas trip? Get the latest information{' '}
+            <br className='sm:hidden' /> on travel guides
+          </p>
+          <Button
+            className='bg-black px-2 py-0.5 rounded-full text-white text-xs'
+            label='More Info'
+            onClick={() => {
+              /* handle search click */
+            }}
+          />
+        </div>
       </div>
 
-      <section className='flex flex-col justify-center items-center bg-[#ffffff] '>
+      <section className='bg-[#ffffff] '>
         {/* Naviagtion & Search Bar */}
-        <div className='flex flex-row py-2 items-center md:gap-0 lg:gap-40 w-[95%] mx-auto '>
+        <div className='flex flex-row py-2 items-center justify-between w-[95%] mx-auto '>
           {/* Logo */}
-          <div className='hidden sm:flex flex-shrink-0'>
+          <div className='hidden md:flex flex-shrink-0'>
             <Image
               src='/icons/Vector.png'
               alt='Alx-logo'
@@ -39,61 +41,63 @@ const Header: React.FC = () => {
             />
           </div>
 
-          {/* Search Bar */}
-          <div className='flex items-center  md:hidden border border-[#E9E9E9] rounded-full'>
-            <div className='flex flex-col items-center '>
-              <label htmlFor='Location' className='text-xs'>
-                Where to
-              </label>
-              <input
-                id='Location'
-                type='text'
-                placeholder='Location'
-                className=' w-[70px] text-xs ml-4 '
-              />
-            </div>
+          {/* Search Bar for Mobile screens */}
+          <div className='flex justify-between items-center md:hidden  w-full '>
+            <div className='flex items-center space-x-1 border border-[#E9E9E9] rounded-full w-auto'>
+              <div className='flex flex-col items-center '>
+                <label htmlFor='Location' className='text-xs'>
+                  Where to
+                </label>
+                <input
+                  id='Location'
+                  type='text'
+                  placeholder='Location'
+                  className=' w-[70px] text-xs ml-4 outline-none'
+                />
+              </div>
 
-            <div>
-              <input
-                id='Day'
-                type='text'
-                placeholder='Date'
-                className='w-[70px] text-xs mt-4.5'
-              />
-            </div>
-            <div className='flex '>
-              <input
-                id='People'
-                type='text'
-                placeholder='Add guest'
-                className='w-[70px] text-xs mt-4'
-              />
-            </div>
+              <div>
+                <input
+                  id='Day'
+                  type='text'
+                  placeholder='Date'
+                  className='w-[70px] text-xs mt-4.5 outline-none'
+                />
+              </div>
+              <div className='flex '>
+                <input
+                  id='People'
+                  type='text'
+                  placeholder='Add guest'
+                  className='w-[70px] text-xs mt-4 outline-none'
+                />
+              </div>
 
-            <div className='flex items-center pr-1'>
-              {' '}
-              <Button
-                icon={
-                  <Image
-                    src='/icons/Frame 22.png'
-                    alt='Search-icon'
-                    width={38}
-                    height={38}
-                  />
-                }
-                className='w-[42px] h-[42px]'
-                label='Search'
-                onClick={() => {
-                  /* handle search click */
-                }}
-              />{' '}
+              <div className='flex items-center pr-1'>
+                <Button
+                  icon={
+                    <Image
+                      src='/icons/Frame 22.png'
+                      alt='Search-icon'
+                      width={34}
+                      height={34}
+                    />
+                  }
+                  className='w-[42px] h-[42px]'
+                  label='Search'
+                  onClick={() => {
+                    /* handle search click */
+                  }}
+                />
+              </div>
             </div>
           </div>
 
+          {/* Search Bar For Bigger screens */}
           <div
-            className=' hidden md:flex flex-row items-center justify-center
+            className='hidden md:flex flex-row items-center justify-center
                   border border-[#E9E9E9] rounded-full bg-white
-                  w-full sm:w-auto px-4 py-3 sm:py-2 gap-3 sm:gap-5'
+                   sm:w-auto px-4 py-3 sm:py-2 gap-3 sm:gap-5'
           >
             {/* Location */}
             <div className='flex flex-col gap-1 w-full sm:w-auto'>
@@ -192,7 +196,7 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          {/* Sign in/up */}
+          {/* Sign in/up Buttons */}
           <div className='hidden lg:flex gap-2 text-xs mt-4 md:mt-0'>
             <Button
               label='Sign in'
@@ -208,6 +212,15 @@ const Header: React.FC = () => {
               onClick={() => {
                 /* handle sign up click */
               }}
+            />
+          </div>
+
+          <div className='flex lg:hidden '>
+            <Image
+              src='/icons/Frame 8.png'
+              alt='Profile'
+              width={38}
+              height={38}
             />
           </div>
         </div>

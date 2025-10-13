@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
       <div className='bg-[#34967c] w-full h-[20px]'></div>
 
       {/* Main Content */}
-      <div className='w-[95%] flex flex-col md:flex-row justify-between pt-8 pb-10 mx-auto gap-10'>
+      <div className='md:w-[80%] lg:w-[95%] flex flex-col lg:flex-row justify-between pt-8 pb-10 mx-auto gap-10'>
         {/* Logo + Description */}
-        <div className='flex flex-col md:w-1/2 gap-6'>
+        <div className='flex flex-col w-[95%] md:w-[75%] mx-auto md:mx-0 gap-6'>
           <div className='flex-shrink-0'>
             <Image
               src='/icons/Vector-2.png'
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Links */}
-        <div className='grid grid-cols-2 sm:flex sm:flex-row gap-10 md:w-1/2 justify-around mx-auto text-center'>
+        <div className='grid grid-cols-2 sm:flex sm:flex-row gap-10 w-[85%] md:w-[90%] mx-auto md:mx-0 justify-around md:justify-between text-center'>
           <div className='flex flex-col items-start gap-4'>
             <h6 className='text-lg font-semibold'>Explore</h6>
             <div className='flex flex-col items-start gap-2 text-xs'>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col items-start gap-4'>
             <h6 className='text-lg font-semibold'>Company</h6>
             <div className='flex flex-col items-start gap-2 text-xs'>
               <p>About us</p>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className='flex flex-col md:flex-row justify-between items-center text-center md:text-left w-[95%] mx-auto border-t border-[#444] py-5 gap-4 text-xs'>
+      <div className='flex flex-col md:flex-row justify-between items-center text-center md:text-left w-[95%] mx-auto border-t border-[#444] py-5 gap-8 md:gap-4 text-xs'>
         <p className='leading-relaxed max-w-xs md:max-w-full text-center md:text-left'>
           Some hotels require you to cancel more than 24 hours before check-in.
           Details{' '}
