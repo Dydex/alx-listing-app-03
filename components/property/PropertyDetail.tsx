@@ -49,7 +49,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   };
 
   return (
-    <div className='container pr-0 sm:pr-6 mx-auto w-[97%] sm:w-[62%] border-t border-[#E6E6E6] mt-8 '>
+    <div className='container pr-0 sm:pr-6 mx-auto w-[97%] md:w-[62%] border-t border-[#E6E6E6] mt-8 '>
       {/* Description */}
       <div className=''>
         <div className='mt-4'>

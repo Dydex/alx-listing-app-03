@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='min-h-[250px] w-full text-[#CACACA] bg-[#1a1a1a]'>
+    <footer className='min-h-[250px] mb-24 md:mb-0 w-full text-[#CACACA] bg-[#1a1a1a]'>
       {/* Top Green Bar */}
       <div className='bg-[#34967c] w-full h-[20px]'></div>
 
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
             here
           </Link>
         </p>
-        <div className='flex flex-wrap justify-center md:justify-end gap-6'>
+        <div className='flex flex-wrap justify-center lg:justify-end gap-6'>
           <p>Terms of Service</p>
           <p>Policy service</p>
           <p>Cookies Policy</p>
