@@ -14,17 +14,22 @@ export default function PropertyPage() {
   if (!property) return <p>Property not found</p>;
 
   return (
-    <main>
-      <div className=''>
-        <PropertyImage property={property} />
-      </div>
-      <div className='flex w-[95%] mx-auto justify-between '>
-        <PropertyDetail property={property} />
-        <BookingSection price={property.price} />
-      </div>
-      <div className=' w-[95%] mx-auto '>
-        <ReviewSection reviews={review} />
-      </div>
-    </main>
+    <>
+      <head>
+        <title>Property Details</title>
+      </head>
+      <main>
+        <div className=''>
+          <PropertyImage property={property} />
+        </div>
+        <div className='flex w-[95%] mx-auto justify-between '>
+          <PropertyDetail property={property} />
+          <BookingSection price={property.price} />
+        </div>
+        <div className=' w-[95%] mx-auto '>
+          <ReviewSection reviews={review} />
+        </div>
+      </main>
+    </>
   );
 }

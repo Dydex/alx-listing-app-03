@@ -1,5 +1,5 @@
 import { PropertyProps } from '@/interfaces/index';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Wifi,
   Bed,
@@ -49,32 +49,42 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
   };
 
   return (
-    <div className='container pr-0 sm:pr-6 mx-auto w-[97%] md:w-[62%] border-t border-[#E6E6E6] mt-8 '>
-      {/* Description */}
-      <div className=''>
-        <div className='mt-4'>
-          <h2 className='text-2xl font-semibold'>Description</h2>
-          <p className='whitespace-pre-line'>
-            {isExpaneded
-              ? property.description
-              : `${property.description.slice(0, MAX_LENGTH)}`}
-          </p>
+    <>
+      <section
+        id='description'
+        data-section
+        className='container pr-0 sm:pr-6 w-[97%] md:w-[62%] border-t border-[#E6E6E6] mt-8 '
+      >
+        {/* Description */}
+        <div className=''>
+          <div className='mt-4'>
+            <p className='whitespace-pre-line'>
+              {isExpaneded
+                ? property.description
+                : `${property.description.slice(0, MAX_LENGTH)}`}
+            </p>
+          </div>
+
+          <div
+            onClick={() => setIsExpanded(!isExpaneded)}
+            className='flex items-center space-x-2'
+          >
+            <p className='text-[#34967C]'>
+              {isExpaneded ? 'Show less' : 'Read more'}
+            </p>
+            {!isExpaneded && (
+              <img src='/icons/Arrow.png' alt='Arrow' width={16} height={6} />
+            )}
+          </div>
+
+          {/* Amenities */}
         </div>
 
         <div
-          onClick={() => setIsExpanded(!isExpaneded)}
-          className='flex items-center space-x-2'
+          id='offers'
+          data-section
+          className='border-t border-[#E6E6E6] mt-10 mb-8'
         >
-          <p className='text-[#34967C]'>
-            {isExpaneded ? 'Show less' : 'Read more'}
-          </p>
-          {!isExpaneded && (
-            <img src='/icons/Arrow.png' alt='Arrow' width={16} height={6} />
-          )}
-        </div>
-
-        {/* Amenities */}
-        <div className='border-t border-[#E6E6E6] mt-10 mb-8'>
           <h2 className='text-2xl font-semibold pt-10'>
             What this place offers
           </h2>
@@ -99,8 +109,8 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
             )}
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 
