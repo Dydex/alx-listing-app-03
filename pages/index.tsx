@@ -48,7 +48,7 @@ export default function Home() {
       <head>
         <title>Property Listings</title>
       </head>
-      <main className=''>
+      <main >
         {/* Different Property Images */}
         <section
           className='

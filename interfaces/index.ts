@@ -71,8 +71,8 @@ export interface categoriesProps {
 }
 
 export interface BookingProps {
+  id: string;
   name: string;
-
   price: number;
   rating: number;
 }

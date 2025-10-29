@@ -24,7 +24,7 @@ export default function PropertyPage() {
         </div>
         <div className='flex w-[95%] mx-auto justify-between '>
           <PropertyDetail property={property} />
-          <BookingSection price={property.price} />
+          <BookingSection booking={property} />
         </div>
         <div className=' w-[95%] mx-auto '>
           <ReviewSection reviews={review} />

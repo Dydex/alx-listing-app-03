@@ -2,7 +2,7 @@ import { BookingProps } from '@/interfaces';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 
-const OrderSummary: React.FC<{ bookingDetails: BookingProps }> = ({
+const OrderSummary: React.FC<{ bookingDetails: any }> = ({
   bookingDetails,
 }) => {
   const { startDate, endDate } = useSelector(
@@ -18,21 +18,31 @@ const OrderSummary: React.FC<{ bookingDetails: BookingProps }> = ({
     <>
       <div className='bg-white p-6 shadow-md rounded-lg'>
         <h2 className='text-xl font-semibold'>Review Order Details</h2>
-        <div className='flex items-center mt-4'>
+        <div className=' items-center w-full mt-4'>
           <img
-            src='https://example.com/property.jpg'
-            alt='Property'
-            className='w-32 h-32 object-cover rounded-md'
+            src={bookingDetails.image}
+            alt={bookingDetails.name}
+            className='w-full h-52 object-cover rounded-md'
           />
-          <div className='ml-4'>
-            <h3 className='text-lg font-semibold'>{bookingDetails.name}</h3>
+        </div>
+        <div className='mt-4'>
+          <h3 className='text-lg font-semibold'>{bookingDetails.name}</h3>
+          <div className='flex gap-1 items-center'>
+            <img src='/icons/Star 2.png' alt='Star' width={16} height={2} />
             <p className='text-sm text-gray-500'>
-              {bookingDetails.rating}(345 reviews)
+              <span className='text-black'>{bookingDetails.rating}</span> {''}{' '}
+              (345 reviews)
             </p>
-            <p className='text-sm text-gray-500'>
-              {new Date(startDate).toLocaleDateString()} • {nights}{' '}
-              {nights === 1 ? 'night' : 'nights'}
-            </p>
+          </div>
+
+          <div className='mt-1'>
+            <span className='py-1 px-1 rounded-sm bg-[#F7F7F7] text-sm text-gray-500'>
+              {new Date(startDate).toLocaleDateString()}
+            </span>{' '}
+            &bull;{' '}
+            <span className='py-1 px-1 rounded-sm bg-[#F7F7F7] text-sm text-gray-500'>
+              {nights} {nights === 1 ? 'night' : 'nights'}
+            </span>
           </div>
         </div>
 

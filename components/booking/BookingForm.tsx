@@ -9,24 +9,40 @@ const BookingForm = () => {
         <h2 className='text-xl font-semibold'>Contact Detail</h2>
         <form>
           {/* Contact Information */}
-          <div className='grid grid-cols-2 gap-4'>
+          <div className='grid grid-col-1 md:grid-cols-2 gap-4 mt-4'>
             <div>
-              <label>First Name</label>
-              <input type='text' className='border p-2 w-full mt-2' />
+              <label htmlFor='firstname'>First Name</label>
+              <input
+                id='lastname'
+                type='text'
+                className='border p-2 w-full mt-2'
+              />
             </div>
             <div>
-              <label>Last Name</label>
-              <input type='text' className='border p-2 w-full mt-2' />
+              <label htmlFor='lastname'>Last Name</label>
+              <input
+                id='lastname'
+                type='text'
+                className='border p-2 w-full mt-2'
+              />
             </div>
           </div>
-          <div className='grid grid-cols-2 gap-4 mt-4'>
+          <div className='grid grid-col-1 md:grid-cols-2 gap-4 mt-4'>
             <div>
-              <label>Email</label>
-              <input type='email' className='border p-2 w-full mt-2' />
+              <label htmlFor='email'>Email</label>
+              <input
+                id='email'
+                type='email'
+                className='border p-2 w-full mt-2'
+              />
             </div>
             <div>
-              <label>Phone Number</label>
-              <input type='text' className='border p-2 w-full mt-2' />
+              <label htmlFor='phonenumber'>Phone Number</label>
+              <input
+                id='phonenumber'
+                type='number'
+                className='border p-2 w-full mt-2'
+              />
             </div>
           </div>
 
@@ -38,15 +54,17 @@ const BookingForm = () => {
               name='card-type'
               required
               className='border p-2 w-full mt-4'
+              title='Card Type'
             >
-              <option value=''>Credit or debit card</option>
+              <option>Credit or debit card</option>
               <option value='credit'>Credit Card</option>
               <option value='debit'>Debit Card</option>
             </select>
           </div>
           <div className='mt-4'>
             <input
-              type='text'
+              id='cardnumber'
+              type='number'
               placeholder='Card number'
               className='border p-2 w-full mt-2'
             />
@@ -54,6 +72,7 @@ const BookingForm = () => {
           <div className='grid grid-cols-2'>
             <div>
               <input
+                id='expirationdate'
                 type='text'
                 placeholder='Expiration date'
                 className='border p-2 w-full '
@@ -61,6 +80,7 @@ const BookingForm = () => {
             </div>
             <div>
               <input
+                id='cvv'
                 type='text'
                 placeholder='CVV'
                 className='border p-2 w-full'
@@ -71,55 +91,62 @@ const BookingForm = () => {
           {/* Billing Address */}
           <h2 className='text-xl font-semibold mt-6'>Billing Address</h2>
           <div className='mt-4'>
-            <label>Street Address</label>
+            <label htmlFor='streetaddress'>Street Address</label>
             <input
+              id='streetaddress'
               type='text'
               placeholder='Street Address'
               className='border p-2 w-full mt-2'
             />
           </div>
-          <div className='grid grid-cols-2 gap-4 mt-4'>
+          <div className='gap-4 mt-4'>
             <div>
-              <label>City</label>
+              <label htmlFor='city'>City</label>
               <input
+                id='city'
                 type='text'
                 placeholder='City'
                 className='border p-2 w-full mt-2'
               />
             </div>
-            <div>
-              <label>State</label>
-              <input
-                type='text'
-                placeholder='State'
-                className='border p-2 w-full mt-2'
-              />
-            </div>
           </div>
+
           <div className='grid grid-cols-2 gap-4 mt-4'>
             <div>
-              <label>Zip Code</label>
+              <label htmlFor='zipcode'>Zip Code</label>
               <input
+                id='zipcode'
                 type='text'
                 placeholder='Zip Code'
                 className='border p-2 w-full mt-2'
               />
             </div>
             <div>
-              <label>Country</label>
-              <select
-                name='country'
-                id='country'
-                className='border p-2.5 w-full mt-2'
-              >
-                <option value=''>Choose a Country</option>
-                {countries.map((country) => (
-                  <option key={country} value={country}>
-                    {country}
-                  </option>
-                ))}
-              </select>
+              <label htmlFor='state'>State</label>
+              <input
+                id='state'
+                type='text'
+                placeholder='State'
+                className='border p-2 w-full mt-2'
+              />
             </div>
+          </div>
+          <div>
+            <label htmlFor='country'>Country</label>
+            <select
+              name='country'
+              id='country'
+              className='border p-2.5 w-full mt-2'
+              title='country'
+              autoComplete='country'
+            >
+              <option value=''>Choose a Country</option>
+              {countries.map((country) => (
+                <option key={country} value={country}>
+                  {country}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className='mt-6'>
@@ -141,7 +168,10 @@ const BookingForm = () => {
           </div>
 
           {/* Submit Button */}
-          <button className='mt-10 bg-green-500 text-white py-2 px-4 rounded-md w-1/2'>
+          <button
+            type='submit'
+            className='mt-10 bg-[#34967c] text-white py-2 px-4 rounded-md w-1/2'
+          >
             Confirm & Pay
           </button>
         </form>

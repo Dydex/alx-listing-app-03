@@ -4,8 +4,9 @@ import { setStartDate, setEndDate } from '@/store/store';
 import { RootState } from '@/store/store';
 import { useRef } from 'react';
 import { useRouter } from 'next/router';
+import { PropertyProps } from '@/interfaces';
 
-const BookingSection: React.FC<{ price: number }> = ({ price }) => {
+const BookingSection: React.FC<{ booking: PropertyProps }> = ({ booking }) => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { startDate, endDate } = useSelector(
@@ -32,18 +33,18 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
     }
 
     if (new Date(endDate) < new Date(startDate)) endRef.current?.focus;
-    router.push('/booking');
+    router.push(`/booking/${booking.id}`);
   };
 
   return (
     <>
       <form
-        onClick={handleSubmit}
+        onSubmit={handleSubmit}
         className='hidden md:block bg-white sticky top-10 p-6 shadow-md h-[400px] rounded-lg w-[35%] mt-8'
       >
         <div className='text-xl text-[#8E8E8E] font-semibold'>
           {' '}
-          <span className='text-black'>${price}</span> /night
+          <span className='text-black'>${booking.price}</span> /night
         </div>
         <div className='mt-4'>
           <label className='text-black'>Check in</label>
@@ -53,6 +54,7 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
             className='border border-[#E6E6E6] p-2 w-full mt-2 text-[#E6E6E6]'
             value={startDate}
             onChange={(e) => dispatch(setStartDate(e.target.value))}
+            min={new Date().toISOString().split('T')[0]}
             required
           />
         </div>
@@ -64,14 +66,15 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
             className='border border-[#E6E6E6] p-2 w-full mt-2 text-[#E6E6E6]'
             value={endDate}
             onChange={(e) => dispatch(setEndDate(e.target.value))}
+            min={startDate || new Date().toISOString().split('T')[0]}
             required
           />
         </div>
 
         <div className='mt-4 flex justify-between'>
-          <p className='text-[#8E8E8E]'>${price} x 7 nights</p>
+          <p className='text-[#8E8E8E]'>${booking.price} x 7 nights</p>
           <p className='text-black'>
-            <strong>${price * 7}</strong>
+            <strong>${booking.price * 7}</strong>
           </p>
         </div>
 
@@ -79,7 +82,7 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
         <div className='mt-4 flex justify-between items-end border-t border-[#E6E6E6]  '>
           <p className='text-[#8E8E8E] mt-4'>Total payment:</p>
           <p className='text-[#34967C]'>
-            <strong>${price * 7}</strong>
+            <strong>${booking.price * 7}</strong>
           </p>
         </div>
 
@@ -100,7 +103,7 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
       >
         <div className='flex flex-col w-[40%] '>
           <div className='text-xl text-[#8E8E8E] font-semibold'>
-            <span className='text-black'>${price}</span> /night
+            <span className='text-black'>${booking.price}</span> /night
           </div>
           <div className='flex items-end'>
             <input
