@@ -9,7 +9,8 @@ export interface CardProps {
   address: {
     state: string;
     city: string;
-    country: string;}
+    country: string;
+  };
 }
 
 // Placeholder for Button component props
@@ -67,4 +68,11 @@ export interface categoriesProps {
   alt: string;
   label: string;
   height?: number;
+}
+
+export interface BookingProps {
+  name: string;
+
+  price: number;
+  rating: number;
 }
